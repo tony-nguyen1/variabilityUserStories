@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ConceptualSystem>
+    <Version MajorNumber="1" MinorNumber="0"/>
+    <Contexts>
+        <Context Identifier="0" Type="Binary">
+            <Attributes>
+                <Attribute Identifier="0">
+                    <Name>IdHappizzy</Name>
+                </Attribute>
+                <Attribute Identifier="1">
+                    <Name>IdEataly</Name>
+                </Attribute>
+                <Attribute Identifier="2">
+                    <Name>IdLafelicita</Name>
+                </Attribute>
+                <Attribute Identifier="3">
+                    <Name>IdSmallitaly</Name>
+                </Attribute>
+                <Attribute Identifier="4">
+                    <Name>exist_serves(IdChevrette)</Name>
+                </Attribute>
+                <Attribute Identifier="5">
+                    <Name>exist_serves(IdForest&amp;existForall_contains(autumn))</Name>
+                </Attribute>
+                <Attribute Identifier="6">
+                    <Name>exist_serves(IdViolet&amp;existForall_contains(/I/vege&amp;vegan&amp;summer))</Name>
+                </Attribute>
+                <Attribute Identifier="7">
+                    <Name>exist_serves(IdStjacques&amp;existForall_contains(spring))</Name>
+                </Attribute>
+                <Attribute Identifier="8">
+                    <Name>exist_serves(existForall_contains(/I/vege&amp;spring))</Name>
+                </Attribute>
+                <Attribute Identifier="9">
+                    <Name>exist_serves(existForall_contains(summer))</Name>
+                </Attribute>
+                <Attribute Identifier="10">
+                    <Name>exist_serves(existForall_contains(vegan))</Name>
+                </Attribute>
+                <Attribute Identifier="11">
+                    <Name>exist_serves(existForall_contains(vege))</Name>
+                </Attribute>
+            </Attributes>
+            <Objects>
+                <Object>
+                    <Name>happizzy</Name>
+                    <Intent>
+                        <HasAttribute AttributeIdentifier="0"/>
+                        <HasAttribute AttributeIdentifier="4"/>
+                        <HasAttribute AttributeIdentifier="5"/>
+                        <HasAttribute AttributeIdentifier="9"/>
+                        <HasAttribute AttributeIdentifier="10"/>
+                        <HasAttribute AttributeIdentifier="11"/>
+                    </Intent>
+                </Object>
+                <Object>
+                    <Name>eataly</Name>
+                    <Intent>
+                        <HasAttribute AttributeIdentifier="1"/>
+                        <HasAttribute AttributeIdentifier="5"/>
+                        <HasAttribute AttributeIdentifier="6"/>
+                        <HasAttribute AttributeIdentifier="9"/>
+                        <HasAttribute AttributeIdentifier="10"/>
+                        <HasAttribute AttributeIdentifier="11"/>
+                    </Intent>
+                </Object>
+                <Object>
+                    <Name>lafelicita</Name>
+                    <Intent>
+                        <HasAttribute AttributeIdentifier="2"/>
+                        <HasAttribute AttributeIdentifier="6"/>
+                        <HasAttribute AttributeIdentifier="9"/>
+                        <HasAttribute AttributeIdentifier="10"/>
+                        <HasAttribute AttributeIdentifier="11"/>
+                    </Intent>
+                </Object>
+                <Object>
+                    <Name>smallitaly</Name>
+                    <Intent>
+                        <HasAttribute AttributeIdentifier="3"/>
+                        <HasAttribute AttributeIdentifier="4"/>
+                        <HasAttribute AttributeIdentifier="7"/>
+                        <HasAttribute AttributeIdentifier="9"/>
+                        <HasAttribute AttributeIdentifier="11"/>
+                    </Intent>
+                </Object>
+            </Objects>
+        </Context>
+    </Contexts>
+    <Lattices/>
+</ConceptualSystem>

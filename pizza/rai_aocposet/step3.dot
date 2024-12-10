@@ -1,0 +1,68 @@
+digraph G { 
+	rankdir=BT;
+subgraph Ingredient { 
+label="Ingredient";
+7 [shape=record,style=filled,fillcolor=orange,label="{C_Ingredient_7||tomato\neggplant\n}"];
+8 [shape=record,style=filled,fillcolor=orange,label="{C_Ingredient_8|autumn\n|shallot\nmushroom\n}"];
+9 [shape=record,style=filled,label="{C_Ingredient_9|summer\n|goatcheese\n}"];
+10 [shape=record,style=filled,label="{C_Ingredient_10||burrata\n}"];
+11 [shape=record,style=filled,fillcolor=lightblue,label="{C_Ingredient_11|vegan\n|}"];
+12 [shape=record,style=filled,label="{C_Ingredient_12|spring\n|scallop\n}"];
+13 [shape=record,style=filled,fillcolor=lightblue,label="{C_Ingredient_13|vege\n|}"];
+	7 -> 9
+	7 -> 11
+	8 -> 11
+	10 -> 12
+	9 -> 13
+	10 -> 13
+	11 -> 13
+}
+subgraph Pizza { 
+label="Pizza";
+22 [shape=record,style=filled,fillcolor=lightblue,label="{C_Pizza_22|existForall_contains(/I/vege&spring)\n|}"];
+16 [shape=record,style=filled,label="{C_Pizza_16|IdViolet\nexistForall_contains(/I/vege&vegan&summer)\n|violet\n}"];
+14 [shape=record,style=filled,label="{C_Pizza_14|IdChevrette\n|chevrette\n}"];
+15 [shape=record,style=filled,label="{C_Pizza_15|IdForest\nexistForall_contains(autumn)\n|forest\n}"];
+23 [shape=record,style=filled,fillcolor=lightblue,label="{C_Pizza_23|existForall_contains(summer)\n|}"];
+24 [shape=record,style=filled,fillcolor=lightblue,label="{C_Pizza_24|existForall_contains(vegan)\n|}"];
+17 [shape=record,style=filled,label="{C_Pizza_17|IdStjacques\nexistForall_contains(spring)\n|stjacques\n}"];
+25 [shape=record,style=filled,fillcolor=lightblue,label="{C_Pizza_25|existForall_contains(vege)\n|}"];
+	22 -> 16
+	22 -> 14
+	22 -> 15
+	16 -> 23
+	14 -> 23
+	16 -> 24
+	15 -> 24
+	22 -> 17
+	23 -> 25
+	24 -> 25
+}
+subgraph Pizzeria { 
+label="Pizzeria";
+29 [shape=record,style=filled,fillcolor=lightblue,label="{C_Pizzeria_29|exist_serves(existForall_contains(/I/vege&spring))\n|}"];
+18 [shape=record,style=filled,label="{C_Pizzeria_18|IdHappizzy\n|happizzy\n}"];
+19 [shape=record,style=filled,label="{C_Pizzeria_19|IdEataly\n|eataly\n}"];
+20 [shape=record,style=filled,label="{C_Pizzeria_20|IdLafelicita\n|lafelicita\n}"];
+21 [shape=record,style=filled,label="{C_Pizzeria_21|IdSmallitaly\nexist_serves(IdStjacques&existForall_contains(spring))\n|smallitaly\n}"];
+27 [shape=record,style=filled,fillcolor=lightblue,label="{C_Pizzeria_27|exist_serves(IdForest&existForall_contains(autumn))\n|}"];
+28 [shape=record,style=filled,fillcolor=lightblue,label="{C_Pizzeria_28|exist_serves(IdViolet&existForall_contains(/I/vege&vegan&summer))\n|}"];
+30 [shape=record,style=filled,fillcolor=lightblue,label="{C_Pizzeria_30|exist_serves(existForall_contains(vegan))\n|}"];
+26 [shape=record,style=filled,fillcolor=lightblue,label="{C_Pizzeria_26|exist_serves(IdChevrette)\n|}"];
+31 [shape=record,style=filled,fillcolor=lightblue,label="{C_Pizzeria_31|exist_serves(existForall_contains(summer))\nexist_serves(existForall_contains(vege))\n|}"];
+	29 -> 18
+	29 -> 19
+	29 -> 20
+	29 -> 21
+	18 -> 27
+	19 -> 27
+	19 -> 28
+	20 -> 28
+	27 -> 30
+	28 -> 30
+	18 -> 26
+	21 -> 26
+	30 -> 31
+	26 -> 31
+}
+}

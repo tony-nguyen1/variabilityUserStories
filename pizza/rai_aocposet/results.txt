@@ -1,0 +1,17 @@
+Ingredient: step=1 nb.concepts=7 nb.attrib rel.=0
+Pizza: step=1 nb.concepts=4 nb.attrib rel.=0
+Pizzeria: step=1 nb.concepts=4 nb.attrib rel.=0
+time:9 ms
+Ingredient: step=2 nb.concepts=7 nb.attrib rel.=0
+Pizza: step=2 nb.concepts=8 nb.attrib rel.=7
+Pizzeria: step=2 nb.concepts=7 nb.attrib rel.=4
+time:3 ms
+Ingredient: step=3 nb.concepts=7 nb.attrib rel.=0
+Pizza: step=3 nb.concepts=8 nb.attrib rel.=7
+Pizzeria: step=3 nb.concepts=10 nb.attrib rel.=8
+time:3 ms
+Ingredient: step=4 nb.concepts=7 nb.attrib rel.=0
+Pizza: step=4 nb.concepts=8 nb.attrib rel.=7
+Pizzeria: step=4 nb.concepts=10 nb.attrib rel.=8
+time:3 ms
+total time: 29

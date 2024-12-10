@@ -1,0 +1,1 @@
+<4>  => exist_serves(existForall_contains(summer)),exist_serves(existForall_contains(vege))

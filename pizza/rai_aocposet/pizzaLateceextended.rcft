@@ -1,0 +1,44 @@
+FormalContext Ingredient
+||vege|vegan|spring|summer|autumn|
+|goatcheese|x|||x||
+|burrata|x||x|||
+|scallop|||x|||
+|tomato|x|x||x||
+|shallot|x|x|||x|
+|mushroom|x|x|||x|
+|eggplant|x|x||x||
+
+FormalContext Pizza
+||IdChevrette|IdForest|IdViolet|IdStjacques|existForall_contains(/I/vege&vegan&summer)|existForall_contains(autumn)|existForall_contains(summer)|existForall_contains(/I/vege&spring)|existForall_contains(vegan)|existForall_contains(spring)|existForall_contains(vege)|
+|chevrette|x||||||x||||x|
+|forest||x||||x|||x||x|
+|violet|||x||x||x||x||x|
+|stjacques||||x||||||x||
+
+FormalContext Pizzeria
+||IdHappizzy|IdEataly|IdLafelicita|IdSmallitaly|exist_serves(IdChevrette)|exist_serves(IdForest&existForall_contains(autumn))|exist_serves(IdViolet&existForall_contains(/I/vege&vegan&summer))|exist_serves(IdStjacques&existForall_contains(spring))|exist_serves(existForall_contains(/I/vege&spring))|exist_serves(existForall_contains(summer))|exist_serves(existForall_contains(vegan))|exist_serves(existForall_contains(vege))|
+|happizzy|x||||x|x||||x|x|x|
+|eataly||x||||x|x|||x|x|x|
+|lafelicita|||x||||x|||x|x|x|
+|smallitaly||||x|x|||x||x||x|
+
+RelationalContext contains
+source Pizza
+target Ingredient
+scaling existForall
+||goatcheese|burrata|scallop|tomato|shallot|mushroom|eggplant|
+|chevrette|x|||x||||
+|forest|||||x|x||
+|violet||||x|||x|
+|stjacques||x|x|||||
+
+RelationalContext serves
+source Pizzeria
+target Pizza
+scaling exist
+||chevrette|forest|violet|stjacques|
+|happizzy|x|x|||
+|eataly||x|x||
+|lafelicita|||x||
+|smallitaly|x|||x|
+

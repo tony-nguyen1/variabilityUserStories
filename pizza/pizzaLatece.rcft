@@ -1,0 +1,45 @@
+FormalContext Ingredient
+||vege|vegan|spring|summer|autumn|
+|goatcheese|x|||x||
+|burrata|x||x|||
+|scallop|||x|||
+|tomato|x|x||x||
+|shallot|x|x|||x|
+|mushroom|x|x|||x|
+|eggplant|x|x||x||
+
+FormalContext Pizza
+||IdChevrette|IdForest|IdViolet|IdStjacques|
+|chevrette|x||||
+|forest||x|||
+|violet|||x||
+|stjacques||||x|
+
+FormalContext Pizzeria
+||IdHappizzy|IdEataly|IdLafelicita|IdSmallitaly|
+|happizzy|x||||
+|eataly||x|||
+|lafelicita|||x||
+|smallitaly||||x|
+
+RelationalContext contains
+source Pizza
+target Ingredient
+scaling existForall
+||goatcheese|burrata|scallop|tomato|shallot|mushroom|eggplant|
+|chevrette|x|||x||||
+|forest|||||x|x||
+|violet||||x|||x|
+|stjacques||x|x|||||
+
+RelationalContext serves
+source Pizzeria
+target Pizza
+scaling exist
+||chevrette|forest|violet|stjacques|
+|happizzy|x|x|||
+|eataly||x|x||
+|lafelicita|||x||
+|smallitaly|x|||x|
+
+

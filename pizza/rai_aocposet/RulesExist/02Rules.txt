@@ -1,0 +1,2 @@
+<2> exist_serves(IdViolet&existForall_contains(/I/vege&vegan&summer)),exist_serves(existForall_contains(summer)),exist_serves(existForall_contains(vege)) => exist_serves(existForall_contains(vegan))
+<2> exist_serves(IdForest&existForall_contains(autumn)),exist_serves(existForall_contains(summer)),exist_serves(existForall_contains(vege)) => exist_serves(existForall_contains(vegan))
