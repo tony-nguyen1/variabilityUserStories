@@ -1,0 +1,134 @@
+FormalContext System
+||MyManga|MangaStore|MangaFan|MangaHome|
+|MyManga|x||||
+|MangaStore||x|||
+|MangaFan|||x||
+|MangaHome||||x|
+
+FormalContext Feature
+||search|viewComment|addComment|moderateComment|CRUDproducts|manageCart|pay|makePromotionalCampaign|signUp|manageUserAccount|manageProfile|
+|search|x|||||||||||
+|viewComment||x||||||||||
+|addComment|||x|||||||||
+|moderateComment||||x||||||||
+|CRUDproducts|||||x|||||||
+|manageCart||||||x||||||
+|pay|||||||x|||||
+|makePromotionalCampaign||||||||x||||
+|signUp|||||||||x|||
+|manageUserAccount||||||||||x||
+|manageProfile|||||||||||x|
+
+FormalContext Role
+||User|productOwner|communityManager|admin|registeredUser|
+|User|x|||||
+|productOwner||x||||
+|communityManager|||x|||
+|admin||||x||
+|registeredUser|||||x|
+
+FormalContext RoleFeat
+||MyManga,user,search|MyManga,user,viewComment|MyManga,user,addComment|MyManga,productOwner,CRUDproducts|MyManga,communityManager,moderateComment|MangaStore,user,search|MangaStore,user,manageCart|MangaStore,user,pay|MangaStore,productOwner,makePromotionalCampaign|MangaStore,productOwner,CRUDproducts|MangaFan,user,search|MangaFan,user,manageCart|MangaFan,user,pay|MangaFan,user,signUp|MangaFan,admin,CRUDproducts|MangaFan,admin,manageUserAccount|MangaFan,registeredUser,manageProfile|MangaFan,admin,manageProfile|MangaHome,user,search|MangaHome,user,viewComment|MangaHome,user,addComment|MangaHome,communityManager,moderateComment|MangaHome,user,signUp|MangaHome,admin,CRUDproducts|MangaHome,admin,manageUserAccount|MangaHome,registeredUser,manageProfile|MangaHome,admin,manageProfile|
+|MyManga,user,search|x|||||||||||||||||||||||||||
+|MyManga,user,viewComment||x||||||||||||||||||||||||||
+|MyManga,user,addComment|||x|||||||||||||||||||||||||
+|MyManga,productOwner,CRUDproducts||||x||||||||||||||||||||||||
+|MyManga,communityManager,moderateComment|||||x|||||||||||||||||||||||
+|MangaStore,user,search||||||x||||||||||||||||||||||
+|MangaStore,user,manageCart|||||||x|||||||||||||||||||||
+|MangaStore,user,pay||||||||x||||||||||||||||||||
+|MangaStore,productOwner,makePromotionalCampaign|||||||||x|||||||||||||||||||
+|MangaStore,productOwner,CRUDproducts||||||||||x||||||||||||||||||
+|MangaFan,user,search|||||||||||x|||||||||||||||||
+|MangaFan,user,manageCart||||||||||||x||||||||||||||||
+|MangaFan,user,pay|||||||||||||x|||||||||||||||
+|MangaFan,user,signUp||||||||||||||x||||||||||||||
+|MangaFan,admin,CRUDproducts     |||||||||||||||x|||||||||||||
+|MangaFan,admin,manageUserAccount     ||||||||||||||||x||||||||||||
+|MangaFan,registeredUser,manageProfile|||||||||||||||||x|||||||||||
+|MangaFan,admin,manageProfile         ||||||||||||||||||x||||||||||
+|MangaHome,user,search                |||||||||||||||||||x|||||||||
+|MangaHome,user,viewComment           ||||||||||||||||||||x||||||||
+|MangaHome,user,addComment                |||||||||||||||||||||x|||||||
+|MangaHome,communityManager,moderateComment||||||||||||||||||||||x||||||
+|MangaHome,user,signUp|||||||||||||||||||||||x|||||
+|MangaHome,admin,CRUDproducts||||||||||||||||||||||||x||||
+|MangaHome,admin,manageUserAccount|||||||||||||||||||||||||x|||
+|MangaHome,registeredUser,manageProfile||||||||||||||||||||||||||x||
+|MangaHome,admin,manageProfile|||||||||||||||||||||||||||x|
+
+RelationalContext RoleFeat2Role
+source RoleFeat
+target Role
+scaling exist
+||User|productOwner|communityManager|admin|registeredUser|
+|MyManga,user,search|x|||||
+|MyManga,user,viewComment|x|||||
+|MyManga,user,addComment|x|||||
+|MyManga,productOwner,CRUDproducts||x||||
+|MyManga,communityManager,moderateComment|||x|||
+|MangaStore,user,search|x|||||
+|MangaStore,user,manageCart|x|||||
+|MangaStore,user,pay|x|||||
+|MangaStore,productOwner,makePromotionalCampaign||x||||
+|MangaStore,productOwner,CRUDproducts||x||||
+|MangaFan,user,search|x|||||
+|MangaFan,user,manageCart|x|||||
+|MangaFan,user,pay|x|||||
+|MangaFan,user,signUp|x|||||
+|MangaFan,admin,CRUDproducts||||x||
+|MangaFan,admin,manageUserAccount||||x||
+|MangaFan,registeredUser,manageProfile|||||x|
+|MangaFan,admin,manageProfile||||x||
+|MangaHome,user,search|x|||||
+|MangaHome,user,viewComment|x|||||
+|MangaHome,user,addComment|x|||||
+|MangaHome,communityManager,moderateComment|||x|||
+|MangaHome,user,signUp|x|||||
+|MangaHome,admin,CRUDproducts||||x||
+|MangaHome,admin,manageUserAccount||||x||
+|MangaHome,registeredUser,manageProfile|||||x|
+|MangaHome,admin,manageProfile||||x||
+
+RelationalContext RoleFeat2Feat
+source RoleFeat
+target Feature
+scaling exist
+||search|viewComment|addComment|moderateComment|CRUDproducts|manageCart|pay|makePromotionalCampaign|signUp|manageUserAccount|manageProfile|
+|MyManga,user,search|x|||||||||||
+|MyManga,user,viewComment||x||||||||||
+|MyManga,user,addComment|||x|||||||||
+|MyManga,productOwner,CRUDproducts|||||x|||||||
+|MyManga,communityManager,moderateComment||||x||||||||
+|MangaStore,user,search|x|||||||||||
+|MangaStore,user,manageCart||||||x||||||
+|MangaStore,user,pay|||||||x|||||
+|MangaStore,productOwner,makePromotionalCampaign||||||||x||||
+|MangaStore,productOwner,CRUDproducts|||||x|||||||
+|MangaFan,user,search|x|||||||||||
+|MangaFan,user,manageCart||||||x||||||
+|MangaFan,user,pay|||||||x|||||
+|MangaFan,user,signUp|||||||||x|||
+|MangaFan,admin,CRUDproducts|||||x|||||||
+|MangaFan,admin,manageUserAccount||||||||||x||
+|MangaFan,registeredUser,manageProfile|||||||||||x|
+|MangaFan,admin,manageProfile|||||||||||x|
+|MangaHome,user,search|x|||||||||||
+|MangaHome,user,viewComment||x||||||||||
+|MangaHome,user,addComment|||x|||||||||
+|MangaHome,communityManager,moderateComment||||x||||||||
+|MangaHome,user,signUp|||||||||x|||
+|MangaHome,admin,CRUDproducts|||||x|||||||
+|MangaHome,admin,manageUserAccount||||||||||x||
+|MangaHome,registeredUser,manageProfile|||||||||||x|
+|MangaHome,admin,manageProfile|||||||||||x|
+
+RelationalContext System2RoleFeat
+source System
+target RoleFeat
+scaling exist
+||MyManga,user,search|MyManga,user,viewComment|MyManga,user,addComment|MyManga,productOwner,CRUDproducts|MyManga,communityManager,moderateComment|MangaStore,user,search|MangaStore,user,manageCart|MangaStore,user,pay|MangaStore,productOwner,makePromotionalCampaign|MangaStore,productOwner,CRUDproducts|MangaFan,user,search|MangaFan,user,manageCart|MangaFan,user,pay|MangaFan,user,signUp|MangaFan,admin,CRUDproducts|MangaFan,admin,manageUserAccount|MangaFan,registeredUser,manageProfile|MangaFan,admin,manageProfile|MangaHome,user,search|MangaHome,user,viewComment|MangaHome,user,addComment|MangaHome,communityManager,moderateComment|MangaHome,user,signUp|MangaHome,admin,CRUDproducts|MangaHome,admin,manageUserAccount|MangaHome,registeredUser,manageProfile|MangaHome,admin,manageProfile|
+|MyManga|x|x|x|x|x|||||||||||||||||||||||
+|MangaStore||||||x|x|x|x|x||||||||||||||||||
+|MangaFan|||||||||||x|x|x|x|x|x|x|x||||||||||
+|MangaHome|||||||||||||||||||x|x|x|x|x|x|x|x|x|

@@ -1,0 +1,26 @@
+Rules calculated from file: aspergillus2021ProtSyst_prim.cex
+
+#relation_description#
+  exist_PS2Plant: the involved plant in the protection system
+  exist_PS2Pest: the involved pest in the protection system  
+  exist_PS2Country:  the country where the protection system has been observed
+
+#metrics_ordered#
+  support
+
+#rules#
+
+<5>  => exist_PS2Pest(aspergillus),exist_PS2Plant(aromatic&evergreen)
+<2> exist_PS2Pest(aspergillus),exist_PS2Plant(lauraceae&comestible&applicOil),exist_PS2Plant(aromatic&evergreen) => field,exist_PS2Pest(attacksCheese),exist_PS2Country(australAfrica)
+<1> exist_PS2Pest(aspergillus),exist_PS2Plant(antidysenteric),exist_PS2Plant(aromatic&evergreen) => field,exist_PS2Pest(attacksCheese),exist_PS2Country(australAfrica),exist_PS2Plant(asteraceae&toxic&applicEssentialOil&applicExtract)
+<1> exist_PS2Pest(aspergillus),exist_PS2Plant(contraceptive),exist_PS2Plant(aromatic&evergreen) => lab,exist_PS2Pest(attacksPeanuts),exist_PS2Country(westernAfrica),exist_PS2Plant(asteraceae&toxic&applicEssentialOil&applicExtract)
+<2> exist_PS2Pest(aspergillus),exist_PS2Country(westernAfrica),exist_PS2Plant(aromatic&evergreen) => lab,exist_PS2Pest(attacksPeanuts),exist_PS2Plant(asteraceae&toxic&applicEssentialOil&applicExtract)
+<3> exist_PS2Pest(aspergillus),exist_PS2Country(australAfrica),exist_PS2Plant(aromatic&evergreen) => field,exist_PS2Pest(attacksCheese)
+<2> exist_PS2Pest(attacksPeanuts),exist_PS2Pest(aspergillus),exist_PS2Plant(aromatic&evergreen) => lab,exist_PS2Country(westernAfrica),exist_PS2Plant(asteraceae&toxic&applicEssentialOil&applicExtract)
+<3> exist_PS2Pest(attacksCheese),exist_PS2Pest(aspergillus),exist_PS2Plant(aromatic&evergreen) => field,exist_PS2Country(australAfrica)
+<1> exist_PS2Pest(attacksRice),exist_PS2Pest(aspergillus),exist_PS2Plant(aromatic&evergreen) => field,exist_PS2Pest(attacksCheese),exist_PS2Country(australAfrica),exist_PS2Plant(lauraceae&comestible&applicOil)
+<2> lab,exist_PS2Pest(aspergillus),exist_PS2Plant(aromatic&evergreen) => exist_PS2Pest(attacksPeanuts),exist_PS2Country(westernAfrica),exist_PS2Plant(asteraceae&toxic&applicEssentialOil&applicExtract)
+<3> field,exist_PS2Pest(aspergillus),exist_PS2Plant(aromatic&evergreen) => exist_PS2Pest(attacksCheese),exist_PS2Country(australAfrica)
+<1> field,exist_PS2Pest(attacksCheese),exist_PS2Pest(aspergillus),exist_PS2Country(australAfrica),exist_PS2Plant(asteraceae&toxic&applicEssentialOil&applicExtract),exist_PS2Plant(aromatic&evergreen) => exist_PS2Plant(antidysenteric)
+<0> field,exist_PS2Pest(attacksCheese),exist_PS2Pest(aspergillus),exist_PS2Country(australAfrica),exist_PS2Plant(antidysenteric),exist_PS2Plant(lauraceae&comestible&applicOil),exist_PS2Plant(asteraceae&toxic&applicEssentialOil&applicExtract),exist_PS2Plant(aromatic&evergreen) => lab,exist_PS2Pest(attacksRice),exist_PS2Pest(attacksPeanuts),exist_PS2Country(westernAfrica),exist_PS2Plant(contraceptive)
+<0> field,lab,exist_PS2Pest(attacksCheese),exist_PS2Pest(attacksPeanuts),exist_PS2Pest(aspergillus),exist_PS2Country(australAfrica),exist_PS2Country(westernAfrica),exist_PS2Plant(antidysenteric),exist_PS2Plant(asteraceae&toxic&applicEssentialOil&applicExtract),exist_PS2Plant(aromatic&evergreen) => exist_PS2Pest(attacksRice),exist_PS2Plant(contraceptive),exist_PS2Plant(lauraceae&comestible&applicOil)
